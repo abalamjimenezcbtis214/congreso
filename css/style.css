@@ -360,6 +360,23 @@ body {
     flex-wrap: wrap;
 }
 
+/* Contraste: .pagina a pone texto azul oscuro; aquí lo corregimos por botón */
+.botones-descarga .btn {
+    color: #0c2d57; /* Amarillo/dorado: azul oscuro legible sobre fondo claro */
+}
+
+.botones-descarga .btn:hover {
+    color: #0c2d57;
+}
+
+.botones-descarga .btn.btn-secundario {
+    color: white; /* Guinda/vino: texto blanco sobre fondo oscuro */
+}
+
+.botones-descarga .btn.btn-secundario:hover {
+    color: white;
+}
+
 /* ============================================================
    FORMULARIOS DE REGISTRO
    ============================================================ */
