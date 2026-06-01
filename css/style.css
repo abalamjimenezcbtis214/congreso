@@ -668,6 +668,22 @@ body {
    SEDE — Datos de contacto y mapa
    ============================================================ */
 
+/* Imagen de la entrada del ITCH */
+.imagen-sede {
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+.imagen-sede img {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 12px;
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
 .sede-info {
     display: flex;
     gap: 40px;
