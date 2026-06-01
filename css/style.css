@@ -822,6 +822,72 @@ body {
 }
 
 /* ============================================================
+   PASOS DE REGISTRO — Tarjetas con overlay (registro-publicacion.html)
+   ============================================================ */
+
+.pasos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.paso-card {
+    position: relative;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+}
+
+.paso-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Texto del paso: aparece al pasar el cursor sobre la imagen */
+.paso-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 62, 80, 0.92);
+    color: #F8F9FA;
+    padding: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.paso-card:hover .paso-overlay {
+    opacity: 1;
+}
+
+.paso-overlay p {
+    color: #F8F9FA;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.paso-overlay a {
+    color: #E67E22;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.paso-overlay a:hover {
+    color: #F8F9FA;
+}
+
+/* ============================================================
    PIE DE PÁGINA
    ============================================================ */
 
