@@ -39,6 +39,57 @@ body {
     margin-right: 20px;
 }
 
+/* --- Logo y datos del evento (index.html) --- */
+.logo-congreso {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.logo-congreso img {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+}
+
+.datos-evento {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.evento-titulo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 8px;
+}
+
+.evento-detalles {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #333333;
+    line-height: 1.5;
+}
+
+/* --- Redes sociales (index.html) --- */
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 20px 0;
+}
+
+.icono-red-social {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.icono-red-social:hover {
+    transform: scale(1.15);
+}
+
 /* ============================================================
    BARRA DE NAVEGACIÓN — Flexbox horizontal
    ============================================================ */
@@ -190,11 +241,8 @@ body {
 .hero {
     width: 100%;
     height: 100vh;
-    background:
-        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-        url('../img/fondo.jpg');
-    background-size: cover;
-    background-position: center;
+    /* Fondo claro igual al resto del sitio (sin imagen ni capa oscura) */
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,18 +256,24 @@ body {
 }
 
 .contenido h1 {
-    color: white;
+    /* Secondary #2C3E50 — título legible sobre fondo claro */
+    color: #2C3E50;
     font-size: 4rem;
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: 2px;
     margin-bottom: 25px;
     text-transform: uppercase;
+    text-shadow: none;
+    /* Primary #E67E22 — acento institucional bajo el título */
+    border-bottom: 5px solid #E67E22;
+    padding-bottom: 20px;
 }
 
 .texto-legal {
-    color: #f1f1f1;
+    color: #333333;
     font-size: 1.2rem;
+    font-weight: bold;
     margin-bottom: 40px;
     line-height: 1.6;
 }
@@ -232,8 +286,8 @@ body {
 }
 
 .btn {
-    background-color: #c9a227;
-    color: white;
+    background-color: #E67E22;
+    color: #F8F9FA;
     padding: 16px 40px;
     border-radius: 10px;
     text-decoration: none;
@@ -247,23 +301,35 @@ body {
 
 .btn:hover {
     transform: translateY(-3px);
-    background-color: #a88414;
+    background-color: #cf6f1d;
+    color: #F8F9FA;
 }
 
 .btn-secundario {
-    background-color: #8b1e3f;
+    background-color: #2C3E50;
+    color: #F8F9FA;
 }
 
 .btn-secundario:hover {
-    background-color: #701730;
+    background-color: #1f2d3a;
+    color: #F8F9FA;
+}
+
+/* Evita que .pagina a sobrescriba el color de los botones-enlace */
+.pagina a.btn,
+.pagina a.btn:hover {
+    color: #F8F9FA;
+    text-decoration: none;
 }
 
 .btn-limpiar {
-    background-color: #666;
+    background-color: #7F8C8D;
+    color: #F8F9FA;
 }
 
 .btn-limpiar:hover {
-    background-color: #444;
+    background-color: #2C3E50;
+    color: #F8F9FA;
 }
 
 /* ============================================================
@@ -332,9 +398,11 @@ body {
 }
 
 .pagina .subtitulo {
-    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #555;
     font-size: 1.1rem;
-    margin-bottom: 30px;
 }
 
 .pagina h2 {
@@ -357,12 +425,18 @@ body {
 }
 
 .pagina a {
-    color: #0c2d57;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+.pagina a:hover {
+    color: #E67E22;
 }
 
 .info-box {
     background-color: white;
-    border-left: 5px solid #c9a227;
+    /* Primary #E67E22 — acento lateral institucional */
+    border-left: 5px solid #E67E22;
     padding: 20px 25px;
     margin: 25px 0;
     border-radius: 0 8px 8px 0;
@@ -370,7 +444,7 @@ body {
 }
 
 .info-box strong {
-    color: #0c2d57;
+    color: #2C3E50;
 }
 
 /* ============================================================
@@ -388,19 +462,29 @@ body {
     background-color: white;
     padding: 28px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
 }
 
 .topico-card h3 {
-    color: #8b1e3f;
+    /* Secondary #2C3E50 — título de cada área temática */
+    color: #2C3E50;
     font-size: 1.15rem;
     margin-bottom: 15px;
     line-height: 1.3;
+    border-bottom: 3px solid #E67E22;
+    padding-bottom: 10px;
 }
 
 .topico-card ul {
     margin-left: 18px;
     font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.topico-card ul li {
+    margin-bottom: 6px;
 }
 
 /* ============================================================
@@ -415,6 +499,8 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
     overflow: hidden;
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
 }
 
 .tabla-datos th,
@@ -425,8 +511,14 @@ body {
 }
 
 .tabla-datos th {
-    background-color: #0c2d57;
-    color: white;
+    /* Secondary #2C3E50 — encabezado de tabla */
+    background-color: #2C3E50;
+    color: #F8F9FA;
+}
+
+.tabla-datos td:first-child {
+    font-weight: bold;
+    color: #2C3E50;
 }
 
 .tabla-datos tr:last-child td {
@@ -434,7 +526,7 @@ body {
 }
 
 .tabla-datos tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #F8F9FA;
 }
 
 /* Botones de descarga en Call FP */
@@ -445,23 +537,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Contraste: .pagina a pone texto azul oscuro; aquí lo corregimos por botón */
-.botones-descarga .btn {
-    color: #0c2d57; /* Amarillo/dorado: azul oscuro legible sobre fondo claro */
-}
-
-.botones-descarga .btn:hover {
-    color: #0c2d57;
-}
-
-.botones-descarga .btn.btn-secundario {
-    color: white; /* Guinda/vino: texto blanco sobre fondo oscuro */
-}
-
-.botones-descarga .btn.btn-secundario:hover {
-    color: white;
-}
-
 /* ============================================================
    FORMULARIOS DE REGISTRO
    ============================================================ */
@@ -470,7 +545,9 @@ body {
     background-color: white;
     padding: 35px 40px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
     margin-top: 20px;
 }
 
@@ -481,7 +558,7 @@ body {
 .grupo-campo label {
     display: block;
     font-weight: bold;
-    color: #0c2d57;
+    color: #2C3E50;
     margin-bottom: 6px;
 }
 
@@ -493,13 +570,15 @@ body {
     border: 2px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
+    background-color: #F8F9FA;
 }
 
 .grupo-campo input:focus,
 .grupo-campo select:focus,
 .grupo-campo textarea:focus {
     outline: none;
-    border-color: #c9a227;
+    border-color: #E67E22;
+    background-color: white;
 }
 
 .grupo-campo textarea {
@@ -509,7 +588,7 @@ body {
 
 .grupo-campo small {
     display: block;
-    color: #777;
+    color: #666;
     margin-top: 4px;
     font-size: 0.85rem;
 }
@@ -541,22 +620,29 @@ body {
     background-color: white;
     border-radius: 8px;
     margin-bottom: 12px;
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 4px solid #E67E22;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
 }
 
 .acordeon summary {
     padding: 18px 25px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #0c2d57;
+    color: #2C3E50;
     cursor: pointer;
-    background-color: #eef2f7;
+    background-color: #F8F9FA;
     list-style: none;
+}
+
+.acordeon summary:hover {
+    background-color: #eef2f4;
 }
 
 .acordeon summary::before {
     content: "▶ ";
-    color: #c9a227;
+    color: #E67E22;
     font-size: 0.85rem;
 }
 
@@ -567,6 +653,11 @@ body {
 .acordeon .contenido-acordeon {
     padding: 20px 25px;
     line-height: 1.8;
+    color: #444;
+}
+
+.acordeon .contenido-acordeon strong {
+    color: #2C3E50;
 }
 
 .acordeon .contenido-acordeon ul {
@@ -581,14 +672,37 @@ body {
     display: flex;
     gap: 40px;
     margin-top: 25px;
+    align-items: stretch;
 }
 
 .sede-datos {
     flex: 1;
+    background-color: white;
+    padding: 28px;
+    border-radius: 12px;
+    /* Primary #E67E22 — acento superior institucional */
+    border-top: 5px solid #E67E22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.sede-datos h2 {
+    color: #2C3E50;
+    margin-top: 0;
+    border-bottom: 3px solid #E67E22;
+    padding-bottom: 10px;
+}
+
+.sede-datos strong {
+    color: #2C3E50;
 }
 
 .sede-datos a {
-    color: #0c2d57;
+    color: #2C3E50;
+    font-weight: bold;
+}
+
+.sede-datos a:hover {
+    color: #E67E22;
 }
 
 .sede-mapa {
@@ -596,12 +710,14 @@ body {
     min-height: 380px;
     border-radius: 12px;
     overflow: hidden;
-    border: 2px solid #ddd;
+    border: 3px solid #E67E22;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .sede-mapa iframe {
     width: 100%;
-    height: 380px;
+    height: 100%;
+    min-height: 380px;
     border: 0;
 }
 
@@ -620,25 +736,35 @@ body {
     margin-bottom: 12px;
     padding: 18px 25px;
     border-radius: 8px;
+    /* Primary #E67E22 — acento lateral institucional */
+    border-left: 5px solid #E67E22;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.lista-archivos li:hover {
+    background-color: #F8F9FA;
+}
+
 .lista-archivos a {
-    color: #0c2d57;
+    color: #2C3E50;
     font-weight: bold;
     text-decoration: none;
 }
 
 .lista-archivos a:hover {
-    color: #c9a227;
+    color: #E67E22;
 }
 
 .lista-archivos .tipo {
-    color: #888;
-    font-size: 0.9rem;
+    background-color: #2C3E50;
+    color: #F8F9FA;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 /* ============================================================
@@ -653,19 +779,27 @@ body {
 }
 
 .exito-icono {
-    font-size: 5rem;
-    color: #2e7d32;
-    margin-bottom: 20px;
+    width: 90px;
+    height: 90px;
+    /* Primary #E67E22 — ícono circular institucional */
+    background-color: #E67E22;
+    color: #F8F9FA;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin: 0 auto 25px;
 }
 
 .exito h1 {
-    color: #0c2d57;
+    color: #2C3E50;
     font-size: 2.2rem;
     margin-bottom: 15px;
 }
 
 .exito p {
-    color: #555;
+    color: #444;
     font-size: 1.1rem;
     margin-bottom: 20px;
     line-height: 1.6;
