@@ -18,14 +18,36 @@ body {
     min-width: 1024px;
 }
 
+.texto-centrado {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.texto-rojo {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 /* ============================================================
    BARRA DE NAVEGACIÓN — Flexbox horizontal
    ============================================================ */
 
 .navbar {
     width: 100%;
-    height: 85px;
-    background-color: rgba(12, 45, 87, 0.95);
+    height: 110px;
+    /* Secondary #2C3E50 — fondo base del navbar (páginas internas) */
+    background-color: #2C3E50;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,15 +55,71 @@ body {
     position: fixed;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(5px);
+    /* Primary #E67E22 — borde inferior institucional */
+    border-bottom: 4px solid #E67E22;
 }
 
+/* Navbar institucional de index.html — degradado horizontal refinado */
+.navbar-institucional {
+    padding: 0 50px;
+    background: linear-gradient(
+        90deg,
+        #F8F9FA 0%,
+        #F8F9FA 38%,
+        #DCE3E7 58%,
+        #2C3E50 85%,
+        #2C3E50 100%
+    );
+}
+
+/* Bloque de logos oficiales (zona clara e intermedia del degradado) */
+.navbar-logos {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    /* Aire visual extra al bloque institucional dentro del padding del navbar */
+    padding-left: 12px;
+}
+
+.navbar-logos-link {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-decoration: none;
+}
+
+.nav-logo {
+    display: block;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Proporciones equilibradas — SEP clara, TecNM con mayor presencia, ITCH contenido */
+.navbar-logos .logo-educacion {
+    max-height: 48px;
+}
+
+.navbar-logos .logo-tecnm {
+    max-height: 62px;
+}
+
+.navbar-logos .logo-itch {
+    max-height: 60px;
+}
+
+/* Menú alineado a la derecha sobre la zona oscura del degradado */
+.navbar-institucional .menu {
+    margin-left: auto;
+}
+
+/* Logo de texto ITCH en las demás páginas del sitio */
 .logo a {
     text-decoration: none;
 }
 
 .logo h2 {
-    color: white;
+    /* Neutral #F8F9FA — texto del logo ITCH en el menú */
+    color: #F8F9FA;
     font-size: 32px;
     letter-spacing: 2px;
 }
@@ -59,7 +137,8 @@ body {
 
 .menu li a {
     text-decoration: none;
-    color: white;
+    /* Neutral #F8F9FA — texto del menú */
+    color: #F8F9FA;
     font-size: 15px;
     transition: 0.3s;
     display: block;
@@ -68,7 +147,8 @@ body {
 
 .menu li a:hover,
 .menu li a.activo {
-    color: #c9a227;
+    /* Secondary #E67E22 — hover y enlace activo */
+    color: #E67E22;
 }
 
 /* Submenú de segundo nivel (Registro) */
@@ -77,12 +157,15 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #0c2d57;
+    /* Tertiary #2C3E50 — fondo del submenú Registro */
+    background-color: #2C3E50;
     list-style: none;
     min-width: 240px;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     padding: 8px 0;
+    border: 1px solid #2C3E50;
+    border-top: none;
 }
 
 .menu > li:hover .submenu {
@@ -95,7 +178,9 @@ body {
 }
 
 .submenu li a:hover {
-    background-color: rgba(201, 162, 39, 0.15);
+    /* Secondary #E67E22 — resaltado en submenú */
+    background-color: rgba(230, 126, 34, 0.2);
+    color: #E67E22;
 }
 
 /* ============================================================
@@ -235,7 +320,7 @@ body {
 .pagina {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 120px 50px 60px;
+    padding: 130px 50px 60px; /* 130px compensa navbar fijo de 110px */
 }
 
 .pagina h1 {
