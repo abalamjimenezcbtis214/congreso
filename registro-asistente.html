@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de asistente — III Congreso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><h2>ITCH</h2></a></div>
+            <ul class="menu">
+                <li><a href="index.html">Bienvenido</a></li>
+                <li><a href="topicos.html">Tópicos</a></li>
+                <li><a href="call-fp.html">Call FP</a></li>
+                <li><a href="costos.html">Costos</a></li>
+                <li>
+                    <a href="#" class="activo">Registro ▾</a>
+                    <ul class="submenu">
+                        <li><a href="registro-publicacion.html">Trabajo con publicación</a></li>
+                        <li><a href="registro-sin-publicacion.html">Trabajo sin publicación</a></li>
+                        <li><a href="registro-asistente.html">Asistente</a></li>
+                    </ul>
+                </li>
+                <li><a href="comite.html">Comité</a></li>
+                <li><a href="sede.html">Sede</a></li>
+                <li><a href="archivos.html">Archivos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina">
+
+        <h1>Registro de asistente</h1>
+        <p class="subtitulo">Inscríbete para asistir al congreso sin presentar trabajo. Consulta los <a href="costos.html">costos</a>.</p>
+
+        <form class="formulario" data-origen="registro-asistente.html">
+
+            <div class="grupo-campo">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="120">
+            </div>
+
+            <div class="fila-dos">
+                <div class="grupo-campo">
+                    <label for="email">Correo electrónico *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="grupo-campo">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" maxlength="10">
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="institucion">Institución *</label>
+                <input type="text" id="institucion" name="institucion" required minlength="3" maxlength="150">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="tipo-asistente">Tipo de asistente *</label>
+                <select id="tipo-asistente" name="tipo-asistente" required>
+                    <option value="">— Selecciona —</option>
+                    <option value="tecnm">Estudiante TecNM</option>
+                    <option value="estudiante-externo">Estudiante externo</option>
+                    <option value="publico">Público general</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="tipo-participacion">Tipo de participación *</label>
+                <select id="tipo-participacion" name="tipo-participacion" required>
+                    <option value="">— Selecciona —</option>
+                    <option value="asistente">Asistente</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="comentarios">Comentarios</label>
+                <textarea id="comentarios" name="comentarios" maxlength="500" placeholder="Motivo de asistencia u observaciones (opcional)"></textarea>
+            </div>
+
+            <div class="botones-formulario">
+                <button type="submit" class="btn">Enviar</button>
+                <button type="reset" class="btn btn-limpiar">Limpiar</button>
+            </div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>III Congreso Interdisciplinario en Ciencias y Humanidades — Instituto Tecnológico de Chetumal © 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

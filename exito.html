@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro enviado — III Congreso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo"><a href="index.html"><h2>ITCH</h2></a></div>
+            <ul class="menu">
+                <li><a href="index.html">Bienvenido</a></li>
+                <li><a href="topicos.html">Tópicos</a></li>
+                <li><a href="call-fp.html">Call FP</a></li>
+                <li><a href="costos.html">Costos</a></li>
+                <li>
+                    <a href="#">Registro ▾</a>
+                    <ul class="submenu">
+                        <li><a href="registro-publicacion.html">Trabajo con publicación</a></li>
+                        <li><a href="registro-sin-publicacion.html">Trabajo sin publicación</a></li>
+                        <li><a href="registro-asistente.html">Asistente</a></li>
+                    </ul>
+                </li>
+                <li><a href="comite.html">Comité</a></li>
+                <li><a href="sede.html">Sede</a></li>
+                <li><a href="archivos.html">Archivos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Página de confirmación: se muestra después de enviar un formulario -->
+    <section class="exito">
+
+        <div class="exito-icono">✓</div>
+
+        <h1>Registro enviado correctamente</h1>
+
+        <p>La información fue recibida de manera satisfactoria.</p>
+
+        <p>
+            Este sitio es estático: los datos no se guardan en una base de datos.
+            En un proyecto real con servidor, aquí se procesarían y almacenarían.
+        </p>
+
+        <!--
+            El enlace se configura con JavaScript leyendo ?origen= de la URL
+            id="btn-nuevo-registro" → script.js le asigna la página del formulario
+        -->
+        <a href="index.html" id="btn-nuevo-registro" class="btn">Realizar nuevo registro</a>
+
+    </section>
+
+    <footer>
+        <p>III Congreso Interdisciplinario en Ciencias y Humanidades — Instituto Tecnológico de Chetumal © 2025</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

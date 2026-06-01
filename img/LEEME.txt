@@ -1,0 +1,2 @@
+Coloca aquí el archivo fondo.jpg para la sección hero de index.html.
+Tamaño recomendado: 1920 x 1080 px.
