@@ -40,61 +40,58 @@
 
     <main class="pagina">
 
-        <h1>Registro de asistente</h1>
-        <p class="subtitulo">Inscríbete para asistir al congreso sin presentar trabajo. Consulta los <a href="costos.html">costos</a>.</p>
+        <h1>Registro — Asistente</h1>
+        <p class="subtitulo">Revisa los pasos para registrarte como asistente al congreso.</p>
 
-        <form class="formulario" data-origen="registro-asistente.html">
+        <div class="pasos-grid">
 
-            <div class="grupo-campo">
-                <label for="nombre">Nombre completo *</label>
-                <input type="text" id="nombre" name="nombre" required minlength="5" maxlength="120">
-            </div>
-
-            <div class="fila-dos">
-                <div class="grupo-campo">
-                    <label for="email">Correo electrónico *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="grupo-campo">
-                    <label for="telefono">Teléfono *</label>
-                    <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}" maxlength="10">
+            <div class="paso-card">
+                <img src="img/asistente/imagen01.png" alt="Paso 1">
+                <div class="paso-overlay">
+                    <p>
+                        1. Ingrese <a href="registro-asistente-formulario.html">AQUÍ</a> y llene el formulario con los datos solicitados.
+                    </p>
                 </div>
             </div>
 
-            <div class="grupo-campo">
-                <label for="institucion">Institución *</label>
-                <input type="text" id="institucion" name="institucion" required minlength="3" maxlength="150">
+            <div class="paso-card">
+                <img src="img/asistente/imagen02.png" alt="Paso 2">
+                <div class="paso-overlay">
+                    <p>
+                        2. Recibirá, al correo que registró en el formulario, la clave de asistente asignada, guarde esta clave ya que para toda comunicación posterior se hará referencia a ésta.<br><br>
+                        * Es posible que el correo llegue a la bandeja de spam.
+                    </p>
+                </div>
             </div>
 
-            <div class="grupo-campo">
-                <label for="tipo-asistente">Tipo de asistente *</label>
-                <select id="tipo-asistente" name="tipo-asistente" required>
-                    <option value="">— Selecciona —</option>
-                    <option value="tecnm">Estudiante TecNM</option>
-                    <option value="estudiante-externo">Estudiante externo</option>
-                    <option value="publico">Público general</option>
-                </select>
+            <div class="paso-card">
+                <img src="img/asistente/imagen03.png" alt="Paso 3">
+                <div class="paso-overlay">
+                    <p>
+                        3. En el correo que recibió la clave de asistente encontrará las indicaciones para realizar el depósito bancario.
+                    </p>
+                </div>
             </div>
 
-            <div class="grupo-campo">
-                <label for="tipo-participacion">Tipo de participación *</label>
-                <select id="tipo-participacion" name="tipo-participacion" required>
-                    <option value="">— Selecciona —</option>
-                    <option value="asistente">Asistente</option>
-                </select>
+            <div class="paso-card">
+                <img src="img/asistente/imagen04.png" alt="Paso 4">
+                <div class="paso-overlay">
+                    <p>
+                        4. Una vez efectuado el pago deberá registrarlo AQUÍ. En caso de requerir factura es necesario registrarlo el mismo día de haber realizado el depósito.
+                    </p>
+                </div>
             </div>
 
-            <div class="grupo-campo">
-                <label for="comentarios">Comentarios</label>
-                <textarea id="comentarios" name="comentarios" maxlength="500" placeholder="Motivo de asistencia u observaciones (opcional)"></textarea>
+            <div class="paso-card">
+                <img src="img/asistente/imagen05.png" alt="Paso 5">
+                <div class="paso-overlay">
+                    <p>
+                        5. Asiste al congreso del 16 al 18 de octubre.
+                    </p>
+                </div>
             </div>
 
-            <div class="botones-formulario">
-                <button type="submit" class="btn">Enviar</button>
-                <button type="reset" class="btn btn-limpiar">Limpiar</button>
-            </div>
-
-        </form>
+        </div>
 
     </main>
 
